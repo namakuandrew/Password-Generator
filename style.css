@@ -106,7 +106,7 @@ body {
   height: 5px;
 }
 
-.pass-setting .options {
+.pass-settings .options {
   display: flex;
   list-style: none;
   flex-wrap: wrap;
@@ -120,13 +120,47 @@ body {
   width: calc(100% / 2);
 }
 
-.option .option:first-child {
+.options .option:first-child {
   pointer-events: none;
 }
 
-.option .option:first-child input {
+.options .option:first-child input {
   opacity: 0.7;
 }
 
 .option .option input {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
 }
+
+.options.option label {
+  cursor: pointer;
+  color: #4f4f4f;
+  padding-left: 0.63rem;
+}
+
+.wrapper .generate-btn {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #43a047;
+  font-size: 1.06rem;
+  padding: 0.94rem 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 0.94rem 0 1.3rem;
+}
+
+.wrapper .generate-btn:hover {
+  background: #2daf34;
+}
+
+@media screen and (max-width: 412px) {
+}
+
+/*https://blog-halip26.thedev.id/post/algoritma-kehidupan*/
+/*https://www.youtube.com/watch?v=2OiKj0IqJsw*/
+/*https://blog-halip26.thedev.id/post/nodejs-vs-php*/
