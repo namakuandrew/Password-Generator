@@ -159,6 +159,46 @@ body {
 }
 
 @media screen and (max-width: 412px) {
+  .container {
+    width: 350px;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .wrapper {
+    margin: 0.5rem 1rem;
+  }
+
+  .wrapper .input {
+    height: 50px;
+    font-size: 1rem;
+    border-radius: 3px;
+    letter-spacing: 1.2px;
+    padding: 0 2rem 0 0.8rem;
+  }
+
+  .wrapper .pass-indicator {
+    height: 3.5px;
+    margin-top: 1.2rem;
+  }
+
+  .option .option label {
+    padding-left: 0.63rem;
+    font-size: 0.9rem;
+  }
+
+  .pass-length input {
+    height: 0.28rem;
+  }
+
+  .wrapper .generate-btn {
+    font-size: 1rem;
+    padding: 0.94rem 0;
+    border-radius: 3.5px;
+    margin: 0.8rem 0 1.2rem;
+  }
 }
 
 /*https://blog-halip26.thedev.id/post/algoritma-kehidupan*/
