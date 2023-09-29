@@ -53,4 +53,40 @@ const generatePassword = () => {
   passwordInput.value = randomPassword;
 };
 
+// fungsi ini untuk update indikator password
+const updatePassIndicator = () => {
+  passIndicator.id =
+    lengthSlider.value <= 8
+      ? "weak"
+      : lengthSlider.value <= 16
+      ? "medium"
+      : "strong";
+};
+
+// fungsi untuk update slider tanpa harus tekan generate btn
+const updateSlider = () => {
+  //update panjang label
+  document.querySelector(".pass-length span").innerText = lengthSlider.value;
+
+  //hubungkan ke fungsi generatePassword
+  generatePassword();
+
+  //update indicator password
+  updatePassIndicator();
+};
+//initialisasi si slider & generate btn
+updateSlider();
+
+const copyPassword = () => {
+  navigator.clipboard.writeText(passwordinput.value);
+  copyicon.innerText = "check";
+  copyicon.style.color = "#4285f4";
+  setTimeout(() => {
+    copyicon.innerText = "copy_all";
+    copyicon.style.color = "#707070";
+  }, 1500);
+};
+
+lengthSlider.addEventListener("input", updateSlider);
 generateBtn.addEventListener("click", generatePassword);
+copyicon.addEventListener("click", copyPassword);
